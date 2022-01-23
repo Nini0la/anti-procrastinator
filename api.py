@@ -56,7 +56,7 @@ class Users(Resource):
         if args['userId'] in userId_list:
             data = data[data['userId'] != str(args['userId'])]
             data.to_csv(users_path, index=False)
-            return( {'message: Delete successful'}, 200)
+            return( {'message': 'Delete successful'}, 200)
         else: 
             return({'message': f"{args['userId']} not found!"}, 404)
             
